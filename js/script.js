@@ -37,52 +37,8 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Dark/Light mode toggle
-function toggleTheme() {
-  const body = document.body;
-  const isDark = body.classList.toggle('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
-  // Update theme button icon
-  const themeBtn = document.querySelector('.theme-toggle i');
-  if (themeBtn) {
-    themeBtn.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-  }
-}
-
-// Load saved theme
-function loadTheme() {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    const themeBtn = document.querySelector('.theme-toggle i');
-    if (themeBtn) {
-      themeBtn.className = 'fas fa-sun';
-    }
-  }
-}
-
-// Language switcher
-function changeLanguage(lang) {
-  setLanguage(lang);
-  // Update dropdown display
-  const langBtn = document.querySelector('.lang-toggle');
-  if (langBtn) {
-    langBtn.textContent = lang.toUpperCase();
-  }
-}
-
 // Initialize on load
 document.addEventListener('DOMContentLoaded', function() {
-  loadTheme();
-
-  // Set initial language button
-  const currentLang = getCurrentLanguage();
-  const langBtn = document.querySelector('.lang-toggle');
-  if (langBtn) {
-    langBtn.textContent = currentLang.toUpperCase();
-  }
-
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

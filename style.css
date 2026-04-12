@@ -69,6 +69,91 @@ color: #00ff88;
 background: rgba(0, 255, 136, 0.1);
 }
 
+.nav-left,
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-actions {
+  margin-left: auto;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+  min-width: 120px;
+}
+
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(10,10,10,0.98);
+  min-width: 190px;
+  border-radius: 10px;
+  z-index: 1000;
+  top: calc(100% + 8px);
+  right: 0;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.lang-dropdown-content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 10px;
+}
+
+.lang-dropdown:hover .lang-dropdown-content,
+.lang-dropdown.lang-dropdown--open .lang-dropdown-content {
+  display: block;
+}
+
+.lang-dropdown-content button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.lang-dropdown-content button:hover {
+  background: rgba(0,255,136,0.12);
+}
+
+nav a[aria-current="page"] {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.12);
+}
+
 /* Mobile Menu Toggle Button */
 .menu-toggle {
 display: none;
@@ -165,6 +250,11 @@ white-space: nowrap;
 background: #00cc6a;
 transform: translateY(-2px);
 box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+a.btn {
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn:active {
@@ -1479,5 +1569,296 @@ color: black;
 @media(max-width:768px){
   .contact-container {
     flex-direction: column;
+  }
+}
+
+/* ----- Team page (scoped) ----- */
+.page-team .team-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4.5rem, 10vw, 7rem) 1.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.18), transparent 55%),
+    linear-gradient(145deg, #022c22 0%, #0f172a 45%, #422006 100%);
+}
+
+.page-team .team-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-team .team-hero-label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6ee7b7;
+  margin-bottom: 1rem;
+}
+
+.page-team .team-hero h1 {
+  font-size: clamp(1.85rem, 5vw, 3rem);
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.page-team .team-hero-lead {
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 42rem;
+  margin: 0 auto 2.25rem;
+}
+
+.page-team .team-hero-stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem 1.25rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.page-team .team-hero-stats li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.page-team .team-hero-stat-value {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(0, 255, 136, 0.12);
+  color: #34d399;
+  font-size: 1.1rem;
+}
+
+.page-team .team-hero-stat-label {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.page-team .section-intro {
+  max-width: 40rem;
+  margin: -0.5rem auto 2.5rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.65;
+}
+
+.page-team .team-section:not(.light):not(.highlight) .section-intro {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.page-team .team-section.light .section-intro {
+  color: #475569;
+}
+
+.page-team .team-section.highlight .section-intro {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.page-team .team-values {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.page-team .team-values h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+}
+
+.page-team .team-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.page-team .value-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1.35rem;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-team .value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.1);
+}
+
+.page-team .value-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.page-team .value-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.page-team .value-card p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.page-team .founder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.page-team .founder-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.page-team .founder-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(0, 255, 136, 0.25);
+}
+
+.page-team .founder-card h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  margin-top: 0.5rem;
+}
+
+.page-team .founder-card .desc {
+  color: rgba(255, 255, 255, 0.82);
+  text-align: left;
+}
+
+.page-team .founder-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+}
+
+.page-team .founder-tags li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(0, 255, 136, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.page-team .btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #0a66c2;
+  color: #fff !important;
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.page-team .btn-linkedin:hover {
+  background: #084d96;
+  transform: translateY(-2px);
+}
+
+.page-team .team-role-cards {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-team .team-card-desc {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #475569;
+  text-align: center;
+}
+
+.page-team .team-section.highlight .team-card-desc {
+  color: #475569;
+}
+
+.page-team .team-section.highlight .team-card {
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.page-team .team-section.highlight .team-card h3 {
+  color: #0f172a;
+}
+
+.page-team .team-cta-band {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), #020617);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-team .team-cta-band p {
+  max-width: 36rem;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+}
+
+.page-team .team-cta-band .btn {
+  text-decoration: none;
+}
+
+.page-team nav a[aria-current="page"] {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.12);
+}
+
+@media (max-width: 768px) {
+  .page-team .team-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .page-team .founder-card .desc {
+    text-align: center;
   }
 }

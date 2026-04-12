@@ -34,25 +34,22 @@
 <body>
 
 <nav>
+<div class="nav-left">
 <div class="logo">
 <i class="fas fa-tractor"></i> AI AgriRover
 </div>
+</div>
 
-<!-- Theme and Language Toggles -->
-<div class="nav-controls">
-<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-<i class="fas fa-moon"></i>
-</button>
-
+<div class="nav-actions">
 <div class="lang-dropdown">
-<button class="lang-toggle" aria-label="Select language">EN</button>
-<div class="lang-dropdown-content">
-<a href="#" onclick="changeLanguage('en')">EN</a>
-<a href="#" onclick="changeLanguage('hi')">HI</a>
-<a href="#" onclick="changeLanguage('mr')">MR</a>
-<a href="#" onclick="changeLanguage('ta')">TA</a>
-<a href="#" onclick="changeLanguage('te')">TE</a>
-<a href="#" onclick="changeLanguage('pa')">PA</a>
+<button type="button" class="lang-toggle" id="lang-toggle" aria-label="Select language" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu">English</button>
+<div class="lang-dropdown-content" id="lang-menu" role="menu" aria-labelledby="lang-toggle">
+<button type="button" role="menuitem" onclick="changeLanguage('en')">English</button>
+<button type="button" role="menuitem" onclick="changeLanguage('hi')">हिन्दी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('mr')">मराठी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('ta')">தமிழ்</button>
+<button type="button" role="menuitem" onclick="changeLanguage('te')">తెలుగు</button>
+<button type="button" role="menuitem" onclick="changeLanguage('pa')">ਪੰਜਾਬੀ</button>
 </div>
 </div>
 </div>
@@ -82,7 +79,7 @@
     <div class="tag" data-key="tag">⚡ AI-Powered Smart Farming</div>
 
     <h1>
-      AI Powered <br>
+      <br>
       <span data-key="title">Future of Farming</span>
     </h1>
 

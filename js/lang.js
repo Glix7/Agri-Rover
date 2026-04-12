@@ -1,3 +1,13 @@
+// Language display names in native script
+const languageNames = {
+  en: "English",
+  hi: "हिन्दी",
+  mr: "मराठी",
+  ta: "தமிழ்",
+  te: "తెలుగు",
+  pa: "ਪੰਜਾਬੀ"
+};
+
 // Language translations for multi-language support
 const translations = {
   en: {
@@ -325,38 +335,454 @@ const translations = {
   }
 };
 
+Object.assign(translations.en, {
+  linkedin: "LinkedIn",
+  readMore: "Read More",
+  productHeroTitle: "AgriRover – Smart Mini Farming Robot",
+  productHeroSub: "A compact electric robotic system designed for small farmers to automate spraying, sowing, fertilizing and more.",
+  watchDemo: "Watch Demo",
+  badgeFieldReady: "Field Ready",
+  badgeEcoFriendly: "Eco Friendly",
+  productAboutTag: "ABOUT THE PRODUCT",
+  productOneRobot: "One Robot. Many Jobs.",
+  productAboutP: "AgriRover is a versatile robotic platform that brings the power of industrial-grade automation to India's small farmers. With swappable tool attachments, it handles spraying, sowing, and fertilizing — reducing labor costs and increasing yield.",
+  productFeat1: "Steel frame built for Indian field conditions",
+  productFeat2: "10-inch rugged wheels for uneven terrain",
+  productFeat3: "Up to 1km wireless remote range",
+  productFeat4: "Interchangeable tool attachment system",
+  productFeat5: "Low-power, long-duration operation",
+  productFeat6: "Weather-resistant enclosed electronics",
+  exploreTechnology: "Explore Technology →",
+  problemWeSolve: "Problem We Solve",
+  probLaborTitle: "Labor Shortage",
+  probLaborDesc: "Rising labor costs.",
+  probCostTitle: "High Cost",
+  probCostDesc: "Machines cost ₹5–8 lakh.",
+  probLargeTitle: "Large Machines",
+  probLargeDesc: "Not for small farms.",
+  probManualTitle: "Manual Work",
+  probManualDesc: "Still dependent.",
+  futureUpgrades: "Future Upgrades",
+  futureUpgradesList: "Mobile App • AI Automation • IoT Integration • Solar Charging",
+  requestDemo: "Request Demo →",
+  techPageHeroTitle: "Engineering Behind AgriRover",
+  techPageHeroSub: "Advanced robotics, embedded systems and wireless tech powering smart farming.",
+  sysArchitecture: "System Architecture",
+  powerUnit: "Power Unit",
+  controlUnit: "Control Unit",
+  driveSystem: "Drive System",
+  attachmentsCard: "Attachments",
+  mechDesignTitle: "Mechanical Design",
+  mechDesignP: "Built with rugged steel structure, compact body and terrain-ready wheels.",
+  mechLi1: "Steel Frame",
+  mechLi2: "Enclosed Body",
+  mechLi3: "10-inch Wheels",
+  mechLi4: "Compact Design",
+  elecControlTitle: "Electronics & Control",
+  microTitle: "Microcontroller",
+  motorDriver: "Motor Driver",
+  powerSysTitle: "Power System",
+  safetyTitle: "Safety",
+  wirelessCommTitle: "Wireless Communication",
+  wlLi1: "NRF / LoRa Modules",
+  wlLi2: "1KM Range",
+  wlLi3: "Custom Remote",
+  wlLi4: "Low Power",
+  futureTechSectionTitle: "Future Technology",
+  futureAiNav: "AI Navigation",
+  futureIot: "IoT",
+  futureMobile: "Mobile App",
+  futureSolar: "Solar",
+  contactPageTitle: "Contact AgriRover",
+  contactPageSub: "We’d love to hear from you — farmer, investor or partner.",
+  sendUsMessage: "Send Us a Message",
+  contactInformation: "Contact Information",
+  labelEmail: "Email",
+  labelPhone: "Phone",
+  labelLocation: "Location",
+  placeholderName: "Your Name",
+  placeholderEmail: "Your Email",
+  placeholderSubject: "Subject",
+  placeholderMessage: "Your Message",
+  sendMessageBtn: "Send Message →",
+  teamHeroLabel: "People & mission",
+  teamHeroTitle: "Meet the team behind AgriRover",
+  teamHeroLead: "We are building affordable, field-ready robotics so small and marginal farmers can farm with less drudgery, lower input waste, and more predictable outcomes.",
+  teamStat1: "Farmer-first product decisions",
+  teamStat2: "Built for Indian fields & crops",
+  teamStat3: "Hardware, embedded & AI in one loop",
+  valuesHeading: "How we work",
+  valuesIntro: "Principles that keep AgriRover honest, useful, and shippable.",
+  valueH1: "Listen before we build",
+  valueP1: "We treat farmer feedback and field trials as the source of truth — not slide decks.",
+  valueH2: "Reliability over hype",
+  valueP2: "Simple mechanisms, testable electronics, and maintainable code beat brittle demos.",
+  valueH3: "Grow the circle",
+  valueP3: "We actively welcome engineers, agronomists, and partners who care about the same mission.",
+  foundersHeading: "Founding team",
+  foundersIntro: "The core team setting direction for product, research, and execution.",
+  satyamRole: "Founder — AI & hardware",
+  satyamBio: "Leads AgriRover's technical direction: mechanical and electronic design, robotics integration, and the roadmap toward intelligent automation in the field.",
+  tagRobotics: "Robotics",
+  tagPrototyping: "Prototyping",
+  tagSystems: "Systems design",
+  harishRole: "Co-founder — research & documentation",
+  harishBio: "Drives research synthesis, documentation, grant and program applications, and coordination so the team can move fast without losing rigor or clarity.",
+  tagResearch: "Research",
+  tagGrants: "Grants & programs",
+  tagOperations: "Operations",
+  engSectionTitle: "What the engineering team covers",
+  engSectionIntro: "Capability areas we are building (and hiring into) as AgriRover matures.",
+  engMechTitle: "Mechanical & hardware",
+  engMechDesc: "Chassis, actuators, power and sensors — designed for mud, dust, and long days in the sun.",
+  engEmbTitle: "Embedded & firmware",
+  engEmbDesc: "Microcontrollers, motor control, wireless links, and safe, deterministic behavior on the robot.",
+  engSoftTitle: "Software & AI",
+  engSoftDesc: "Field software, data from trials, and models that make spraying and navigation smarter over time.",
+  advisorsHeading: "Advisors",
+  advisorsIntro: "Domain experts who help us stress-test assumptions and stay grounded in real agriculture.",
+  advAgTitle: "Agriculture advisor",
+  advAgDesc: "Crop cycles, local practices, and what \"good enough\" looks like on small plots.",
+  advTechTitle: "Technology mentor",
+  advTechDesc: "Architecture, manufacturability, and scaling a hardware-heavy startup responsibly.",
+  supportHeading: "Startup support",
+  supportIntro: "Programs and mentors that back our execution and connect us to the ecosystem.",
+  supInnovTitle: "Innovation programs",
+  supInnovDesc: "Incubation, cohorts, and structured support as we validate and deploy.",
+  supMentorsTitle: "Mentors",
+  supMentorsDesc: "Operators and founders who have shipped hardware and navigated early-stage growth.",
+  teamCtaTitle: "Want to join AgriRover?",
+  teamCtaSub: "We are looking for engineers, makers, and researchers who want their work to show up in real fields.",
+  contactUsBtn: "Contact us",
+  invHeroTitle: "Invest in the Future of Farming",
+  invHeroSub: "AgriRover is building affordable robotic farming solutions for millions of small farmers in India.",
+  downloadPitch: "Download Pitch Deck",
+  invProblemTitle: "The Problem",
+  invProb1Title: "Labor Shortage",
+  invProb1Desc: "Farmers face labor shortages and rising wages.",
+  invProb2Title: "Expensive Machinery",
+  invProb2Desc: "Traditional tractors cost ₹5–8 lakhs.",
+  invProb3Title: "Small Land Holdings",
+  invProb3Desc: "Most farmers have very small land sizes.",
+  invProb4Title: "Manual Farming",
+  invProb4Desc: "Most operations are still manual.",
+  invSolutionTitle: "Our Solution",
+  invSol1Title: "Compact Electric Rover",
+  invSol1Desc: "Designed for small farms and narrow fields.",
+  invSol2Title: "Remote Controlled",
+  invSol2Desc: "Up to 1 km wireless range.",
+  invSol3Title: "Multi Purpose",
+  invSol3Desc: "Spraying, sowing, fertilizing & more.",
+  invSol4Title: "Affordable",
+  invSol4Desc: "Estimated cost under ₹1 lakh.",
+  invMarketTitle: "Market Opportunity",
+  invTamTitle: "TAM",
+  invTamLine: "9.3 Crore Farmers",
+  invTamDesc: "Total agricultural users in India.",
+  invSamTitle: "SAM",
+  invSamLine: "86% Small Farmers",
+  invSamDesc: "Majority are small & marginal farmers.",
+  invSomTitle: "SOM",
+  invSomLine: "Initial Target Segment",
+  invSomDesc: "Farmers with less than 2 acres land.",
+  invInvestTitle: "Investment Opportunity",
+  invInvestP: "AgriRover is seeking investors, accelerators and strategic partners to scale across India.",
+  invCard1Title: "Seed Investment",
+  invCard1Desc: "Support prototype & manufacturing stage.",
+  invCard2Title: "Strategic Partners",
+  invCard2Desc: "Collaborate with agri-tech companies.",
+  invCard3Title: "Accelerators",
+  invCard3Desc: "Join startup programs & scaling support.",
+  invCtaTitle: "Interested in Investing?",
+  invCtaBtn: "Contact for Investment",
+  blogHeroTitle: "AgriRover Blog",
+  blogHeroSub: "Insights on agriculture, robotics, and our startup journey.",
+  blogLatestTitle: "Latest Articles",
+  blogArt1Title: "Future of AI in Agriculture",
+  blogArt1Desc: "AI & robotics are transforming modern farming.",
+  blogArt2Title: "Problems of Small Farmers",
+  blogArt2Desc: "High cost, low tech access & labor shortage.",
+  blogArt3Title: "Why AgriRover",
+  blogArt3Desc: "Built to solve real farming problems.",
+  blogArt4Title: "Robotics in Farming",
+  blogArt4Desc: "Automation improving efficiency & yield.",
+  blogDevTitle: "Development Updates",
+  blogDev1Title: "Prototype Development",
+  blogDev1Desc: "Building first working model with remote system.",
+  blogDev2Title: "₹50,000 Grant Received",
+  blogDev2Desc: "Supported by college innovation program.",
+  blogFollowTitle: "Follow Our Journey",
+  blogFollowSub: "Stay updated with AgriRover progress & innovations",
+  blogConnectBtn: "Connect With Us"
+});
+
+Object.assign(translations.hi, {
+  linkedin: "लिंक्डइन",
+  readMore: "और पढ़ें",
+  productHeroTitle: "एग्रीरोवर – स्मार्ट मिनी फार्मिंग रोबोट",
+  productHeroSub: "छोटे किसानों के लिए स्प्रे, बुवाई, उर्वरक और अधिक को स्वचालित करने के लिए डिज़ाइन किया गया एक कॉम्पैक्ट इलेक्ट्रिक रोबोटिक सिस्टम।",
+  watchDemo: "डेमो देखें",
+  badgeFieldReady: "खेत के लिए तैयार",
+  badgeEcoFriendly: "पर्यावरण अनुकूल",
+  productAboutTag: "उत्पाद के बारे में",
+  productOneRobot: "एक रोबोट। कई काम।",
+  productAboutP: "एग्रीरोवर एक बहुमुखी रोबोटिक प्लेटफ़ॉर्म है जो भारत के छोटे किसानों तक औद्योगिक-स्तर का स्वचालन लाता है। इंटरचेंजेबल टूल अटैचमेंट के साथ यह छिड़काव, बुवाई और उर्वरक को संभालता है — श्रम लागत कम करता है और उपज बढ़ाता है।",
+  productFeat1: "भारतीय खेत की स्थितियों के लिए स्टील फ्रेम",
+  productFeat2: "ऊबड़-खाबड़ जमीन के लिए 10 इंच मजबूत पहिए",
+  productFeat3: "1 किमी तक वायरलेस रिमोट रेंज",
+  productFeat4: "इंटरचेंजेबल टूल अटैचमेंट सिस्टम",
+  productFeat5: "कम बिजली, लंबी अवधि संचालन",
+  productFeat6: "मौसम-प्रतिरोधी बंद इलेक्ट्रॉनिक्स",
+  exploreTechnology: "प्रौद्योगिकी देखें →",
+  problemWeSolve: "समस्या जिसे हम हल करते हैं",
+  probLaborTitle: "श्रम की कमी",
+  probLaborDesc: "बढ़ती श्रम लागत।",
+  probCostTitle: "उच्च लागत",
+  probCostDesc: "मशीनें ₹5–8 लाख की।",
+  probLargeTitle: "बड़ी मशीनें",
+  probLargeDesc: "छोटे खेतों के लिए नहीं।",
+  probManualTitle: "मैनुअल काम",
+  probManualDesc: "अभी भी निर्भर।",
+  futureUpgrades: "भविष्य के उन्नयन",
+  futureUpgradesList: "मोबाइल ऐप • एआई स्वचालन • IoT एकीकरण • सौर चार्जिंग",
+  requestDemo: "डेमो का अनुरोध →",
+  techPageHeroTitle: "एग्रीरोवर के पीछे इंजीनियरिंग",
+  techPageHeroSub: "स्मार्ट खेती को शक्ति प्रदान करने वाला उन्नत रोबोटिक्स, एम्बेडेड सिस्टम और वायरलेस तकनीक।",
+  sysArchitecture: "सिस्टम आर्किटेक्चर",
+  powerUnit: "पावर यूनिट",
+  controlUnit: "नियंत्रण यूनिट",
+  driveSystem: "ड्राइव सिस्टम",
+  attachmentsCard: "अटैचमेंट",
+  mechDesignTitle: "यांत्रिक डिज़ाइन",
+  mechDesignP: "मजबूत स्टील संरचना, कॉम्पैक्ट बॉडी और टेरेन-रेडी पहियों के साथ निर्मित।",
+  mechLi1: "स्टील फ्रेम",
+  mechLi2: "बंद बॉडी",
+  mechLi3: "10 इंच पहिए",
+  mechLi4: "कॉम्पैक्ट डिज़ाइन",
+  elecControlTitle: "इलेक्ट्रॉनिक्स और नियंत्रण",
+  microTitle: "माइक्रोकंट्रोलर",
+  motorDriver: "मोटर ड्राइवर",
+  powerSysTitle: "पावर सिस्टम",
+  safetyTitle: "सुरक्षा",
+  wirelessCommTitle: "वायरलेस संचार",
+  wlLi1: "NRF / LoRa मॉड्यूल",
+  wlLi2: "1KM रेंज",
+  wlLi3: "कस्टम रिमोट",
+  wlLi4: "कम बिजली",
+  futureTechSectionTitle: "भविष्य की तकनीक",
+  futureAiNav: "एआई नेविगेशन",
+  futureIot: "IoT",
+  futureMobile: "मोबाइल ऐप",
+  futureSolar: "सौर",
+  contactPageTitle: "एग्रीरोवर से संपर्क करें",
+  contactPageSub: "हम आपसे सुनना चाहेंगे — किसान, निवेशक या साझेदार।",
+  sendUsMessage: "हमें संदेश भेजें",
+  contactInformation: "संपर्क जानकारी",
+  labelEmail: "ईमेल",
+  labelPhone: "फ़ोन",
+  labelLocation: "स्थान",
+  placeholderName: "आपका नाम",
+  placeholderEmail: "आपका ईमेल",
+  placeholderSubject: "विषय",
+  placeholderMessage: "आपका संदेश",
+  sendMessageBtn: "संदेश भेजें →",
+  teamHeroLabel: "लोग और मिशन",
+  teamHeroTitle: "एग्रीरोवर के पीछे की टीम से मिलें",
+  teamHeroLead: "हम किफायती, खेत-तैयार रोबोटिक्स बना रहे हैं ताकि छोटे और सीमांत किसान कम मेहनत, कम इनपुट बर्बादी और अधिक पूर्वानुमेय परिणामों के साथ खेती कर सकें।",
+  teamStat1: "किसान-पहले उत्पाद निर्णय",
+  teamStat2: "भारतीय खेतों और फसलों के लिए निर्मित",
+  teamStat3: "एक लूप में हार्डवेयर, एम्बेडेड और एआई",
+  valuesHeading: "हम कैसे काम करते हैं",
+  valuesIntro: "सिद्धांत जो एग्रीरोवर को ईमानदार, उपयोगी और शिप करने योग्य रखते हैं।",
+  valueH1: "बनाने से पहले सुनें",
+  valueP1: "हम किसान प्रतिक्रिया और फील्ड ट्रायल को सच का स्रोत मानते हैं — स्लाइड डेक नहीं।",
+  valueH2: "हाइप पर विश्वसनीयता",
+  valueP2: "सरल तंत्र, परीक्षण योग्य इलेक्ट्रॉनिक्स और रखरखाव योग्य कोड नाजुक डेमो से बेहतर हैं।",
+  valueH3: "मंडली बढ़ाएं",
+  valueP3: "हम इंजीनियरों, कृषि विशेषज्ञों और साझेदारों का स्वागत करते हैं जो इसी मिशन की परवाह करते हैं।",
+  foundersHeading: "संस्थापक टीम",
+  foundersIntro: "उत्पाद, अनुसंधान और निष्पादन की दिशा तय करने वाली मुख्य टीम।",
+  satyamRole: "संस्थापक — एआई और हार्डवेयर",
+  satyamBio: "एग्रीरोवर की तकनीकी दिशा का नेतृत्व: यांत्रिक और इलेक्ट्रॉनिक डिज़ाइन, रोबोटिक्स एकीकरण, और खेत में बुद्धिमान स्वचालन की रोडमैप।",
+  tagRobotics: "रोबोटिक्स",
+  tagPrototyping: "प्रोटोटाइपिंग",
+  tagSystems: "सिस्टम डिज़ाइन",
+  harishRole: "सह-संस्थापक — अनुसंधान और दस्तावेज़ीकरण",
+  harishBio: "अनुसंधान संश्लेषण, दस्तावेज़ीकरण, अनुदान और कार्यक्रम आवेदन, और समन्वय ताकि टीम गति से आगे बढ़े बिना कठोरता या स्पष्टता खोए।",
+  tagResearch: "अनुसंधान",
+  tagGrants: "अनुदान और कार्यक्रम",
+  tagOperations: "संचालन",
+  engSectionTitle: "इंजीनियरिंग टीम क्या कवर करती है",
+  engSectionIntro: "क्षेत्र जिन्हें हम बना रहे हैं (और भर्ती कर रहे हैं) जैसे-जैसे एग्रीरोवर परिपक्व होता है।",
+  engMechTitle: "यांत्रिक और हार्डवेयर",
+  engMechDesc: "चेसिस, एक्चुएटर, पावर और सेंसर — कीचड़, धूल और धूप में लंबे दिनों के लिए डिज़ाइन।",
+  engEmbTitle: "एम्बेडेड और फर्मवेयर",
+  engEmbDesc: "माइक्रोकंट्रोलर, मोटर नियंत्रण, वायरलेस लिंक, और रोबोट पर सुरक्षित, निर्धारित व्यवहार।",
+  engSoftTitle: "सॉफ़्टवेयर और एआई",
+  engSoftDesc: "फील्ड सॉफ़्टवेयर, ट्रायल डेटा, और मॉडल जो समय के साथ छिड़काव और नेविगेशन को स्मार्ट बनाते हैं।",
+  advisorsHeading: "सलाहकार",
+  advisorsIntro: "क्षेत्र के विशेषज्ञ जो हमारे अनुमानों की जांच करते हैं और वास्तविक कृषि में जमीन पर रखते हैं।",
+  advAgTitle: "कृषि सलाहकार",
+  advAgDesc: "फसल चक्र, स्थानीय प्रथाएं, और छोटे प्लॉट पर \"अच्छा पर्याप्त\" कैसा दिखता है।",
+  advTechTitle: "प्रौद्योगिकी मार्गदर्शक",
+  advTechDesc: "आर्किटेक्चर, निर्माण योग्यता, और हार्डवेयर-भारी स्टार्टअप को जिम्मेदारी से स्केल करना।",
+  supportHeading: "स्टार्टअप सहायता",
+  supportIntro: "कार्यक्रम और मार्गदर्शक जो हमारे निष्पादन का समर्थन करते हैं और पारिस्थितिकी तंत्र से जोड़ते हैं।",
+  supInnovTitle: "नवाचार कार्यक्रम",
+  supInnovDesc: "इन्क्यूबेशन, कोहॉर्ट और संरचित सहायता जैसे हम मान्य करते और तैनात करते हैं।",
+  supMentorsTitle: "मार्गदर्शक",
+  supMentorsDesc: "ऑपरेटर और संस्थापक जिन्होंने हार्डवेयर शिप किया और प्रारंभिक वृद्धि नेविगेट की।",
+  teamCtaTitle: "एग्रीरोवर में शामिल हों?",
+  teamCtaSub: "हम इंजीनियरों, निर्माताओं और शोधकर्ताओं की तलाश में हैं जो चाहते हैं कि उनका काम वास्तविक खेतों में दिखे।",
+  contactUsBtn: "हमसे संपर्क करें",
+  invHeroTitle: "खेती के भविष्य में निवेश करें",
+  invHeroSub: "एग्रीरोवर भारत में लाखों छोटे किसानों के लिए किफायती रोबोटिक खेती समाधान बना रहा है।",
+  downloadPitch: "पिच डेक डाउनलोड करें",
+  invProblemTitle: "समस्या",
+  invProb1Title: "श्रम की कमी",
+  invProb1Desc: "किसान श्रम की कमी और बढ़ती मजदूरी का सामना करते हैं।",
+  invProb2Title: "महंगी मशीनरी",
+  invProb2Desc: "पारंपरिक ट्रैक्टर ₹5–8 लाख की लागत करते हैं।",
+  invProb3Title: "छोटे भूमि धारण",
+  invProb3Desc: "अधिकांश किसानों के पास बहुत छोटी जमीन है।",
+  invProb4Title: "मैनुअल खेती",
+  invProb4Desc: "अधिकांश कार्य अभी भी मैनुअल हैं।",
+  invSolutionTitle: "हमारा समाधान",
+  invSol1Title: "कॉम्पैक्ट इलेक्ट्रिक रोवर",
+  invSol1Desc: "छोटे खेतों और संकरी खेतों के लिए डिज़ाइन।",
+  invSol2Title: "रिमोट नियंत्रित",
+  invSol2Desc: "1 किमी तक वायरलेस रेंज।",
+  invSol3Title: "बहुउद्देश्यीय",
+  invSol3Desc: "छिड़काव, बुवाई, उर्वरक और अधिक।",
+  invSol4Title: "किफायती",
+  invSol4Desc: "अनुमानित लागत ₹1 लाख से कम।",
+  invMarketTitle: "बाजार अवसर",
+  invTamTitle: "TAM",
+  invTamLine: "9.3 करोड़ किसान",
+  invTamDesc: "भारत में कुल कृषि उपयोगकर्ता।",
+  invSamTitle: "SAM",
+  invSamLine: "86% छोटे किसान",
+  invSamDesc: "बहुमत छोटे और सीमांत किसान हैं।",
+  invSomTitle: "SOM",
+  invSomLine: "प्रारंभिक लक्ष्य खंड",
+  invSomDesc: "2 एकड़ से कम जमीन वाले किसान।",
+  invInvestTitle: "निवेश अवसर",
+  invInvestP: "एग्रीरोवर भारत भर में स्केल करने के लिए निवेशक, एक्सीलरेटर और रणनीतिक साझेदारों की तलाश में है।",
+  invCard1Title: "सीड निवेश",
+  invCard1Desc: "प्रोटोटाइप और निर्माण चरण का समर्थन।",
+  invCard2Title: "रणनीतिक साझेदार",
+  invCard2Desc: "एग्री-टेक कंपनियों के साथ सहयोग।",
+  invCard3Title: "एक्सीलरेटर",
+  invCard3Desc: "स्टार्टअप कार्यक्रमों और स्केलिंग सहायता में शामिल हों।",
+  invCtaTitle: "निवेश में रुचि?",
+  invCtaBtn: "निवेश के लिए संपर्क",
+  blogHeroTitle: "एग्रीरोवर ब्लॉग",
+  blogHeroSub: "कृषि, रोबोटिक्स और हमारी स्टार्टअप यात्रा पर अंतर्दृष्टि।",
+  blogLatestTitle: "नवीनतम लेख",
+  blogArt1Title: "कृषि में एआई का भविष्य",
+  blogArt1Desc: "एआई और रोबोटिक्स आधुनिक खेती को बदल रहे हैं।",
+  blogArt2Title: "छोटे किसानों की समस्याएं",
+  blogArt2Desc: "उच्च लागत, कम तकनीक पहुंच और श्रम की कमी।",
+  blogArt3Title: "एग्रीरोवर क्यों",
+  blogArt3Desc: "वास्तविक खेती की समस्याओं को हल करने के लिए बनाया गया।",
+  blogArt4Title: "खेती में रोबोटिक्स",
+  blogArt4Desc: "दक्षता और उपज में सुधार के लिए स्वचालन।",
+  blogDevTitle: "विकास अपडेट",
+  blogDev1Title: "प्रोटोटाइप विकास",
+  blogDev1Desc: "रिमोट सिस्टम के साथ पहला कार्यशील मॉडल बनाना।",
+  blogDev2Title: "₹50,000 अनुदान प्राप्त",
+  blogDev2Desc: "कॉलेज नवाचार कार्यक्रम द्वारा समर्थित।",
+  blogFollowTitle: "हमारी यात्रा का अनुसरण करें",
+  blogFollowSub: "एग्रीरोवर की प्रगति और नवाचारों के साथ अपडेट रहें",
+  blogConnectBtn: "हमसे जुड़ें"
+});
+
 // Function to get current language
 function getCurrentLanguage() {
   return localStorage.getItem('language') || 'en';
 }
 
+function htmlLangFromCode(lang) {
+  if (lang === 'pa') return 'pa-Guru';
+  return lang;
+}
+
+function syncLangToggleLabel() {
+  const langBtn = document.querySelector('.lang-toggle');
+  const lang = getCurrentLanguage();
+  if (langBtn && languageNames[lang]) {
+    langBtn.textContent = languageNames[lang];
+  }
+}
+
+function closeLangDropdown() {
+  const wrap = document.querySelector('.lang-dropdown');
+  const toggle = document.querySelector('.lang-toggle');
+  if (wrap) wrap.classList.remove('lang-dropdown--open');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+}
+
+// Called from index.html onclick handlers — was missing before (only setLanguage existed)
+function changeLanguage(lang) {
+  setLanguage(lang);
+  closeLangDropdown();
+}
+
 // Function to set language
 function setLanguage(lang) {
-  localStorage.setItem('language', lang);
+  const code = translations[lang] ? lang : 'en';
+  localStorage.setItem('language', code);
+  document.documentElement.lang = htmlLangFromCode(code);
   updateTexts();
+  syncLangToggleLabel();
 }
 
 // Function to update all texts
 function updateTexts() {
   const lang = getCurrentLanguage();
-  const trans = translations[lang] || translations['en'];
+  const code = translations[lang] ? lang : 'en';
+  const trans = { ...translations.en, ...translations[code] };
 
-  // Update elements with data-key
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
-    if (trans[key]) {
+    if (trans[key] !== undefined && trans[key] !== '') {
       el.textContent = trans[key];
     }
   });
 
-  // Update placeholders
   document.querySelectorAll('[data-placeholder]').forEach(el => {
     const key = el.getAttribute('data-placeholder');
-    if (trans[key]) {
+    if (trans[key] !== undefined && trans[key] !== '') {
       el.placeholder = trans[key];
     }
   });
 }
 
-// Initialize language on load
-document.addEventListener('DOMContentLoaded', updateTexts);
+function initLangDropdown() {
+  const wrap = document.querySelector('.lang-dropdown');
+  const toggle = document.querySelector('.lang-toggle');
+  if (!wrap || !toggle) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = wrap.classList.toggle('lang-dropdown--open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  wrap.addEventListener('click', (e) => e.stopPropagation());
+
+  document.addEventListener('click', () => closeLangDropdown());
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLangDropdown();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = getCurrentLanguage();
+  document.documentElement.lang = htmlLangFromCode(translations[lang] ? lang : 'en');
+  updateTexts();
+  syncLangToggleLabel();
+  initLangDropdown();
+});

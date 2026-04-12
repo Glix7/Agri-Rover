@@ -5,19 +5,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgriRover Team</title>
-
+<meta name="description" content="Meet the founding team behind AI AgriRover — building affordable agricultural robotics for small and marginal farmers in India.">
 <link rel="stylesheet" href="style.css">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
-<body>
+<body class="page-team">
 
-<!-- NAVBAR -->
 <nav>
-<h2><i class="fas fa-tractor"></i> AI AgriRover</h2>
+<div class="nav-left">
+<div class="logo">
+<i class="fas fa-tractor"></i> AI AgriRover
+</div>
+</div>
+
+<div class="nav-actions">
+<div class="lang-dropdown">
+<button type="button" class="lang-toggle" id="lang-toggle" aria-label="Select language" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu">English</button>
+<div class="lang-dropdown-content" id="lang-menu" role="menu" aria-labelledby="lang-toggle">
+<button type="button" role="menuitem" onclick="changeLanguage('en')">English</button>
+<button type="button" role="menuitem" onclick="changeLanguage('hi')">हिन्दी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('mr')">मराठी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('ta')">தமிழ்</button>
+<button type="button" role="menuitem" onclick="changeLanguage('te')">తెలుగు</button>
+<button type="button" role="menuitem" onclick="changeLanguage('pa')">ਪੰਜਾਬੀ</button>
+</div>
+</div>
+</div>
 
 <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
 <span></span>
@@ -26,238 +40,196 @@
 </button>
 
 <ul id="navMenu">
-<li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
-<li><a href="product.html"><i class="fas fa-box"></i> <span>Product</span></a></li>
-<li><a href="technology.html"><i class="fas fa-microchip"></i> <span>Technology</span></a></li>
-<li><a href="team.html"><i class="fas fa-users"></i> <span>Team</span></a></li>
-<li><a href="investors.html"><i class="fas fa-chart-line"></i> <span>Investors</span></a></li>
-<li><a href="blog.html"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
-<li><a href="contact.html"><i class="fas fa-phone"></i> <span>Contact</span></a></li>
+<li><a href="index.html"><i class="fas fa-home"></i> <span data-key="home">Home</span></a></li>
+<li><a href="product.html"><i class="fas fa-box"></i> <span data-key="product">Product</span></a></li>
+<li><a href="technology.html"><i class="fas fa-microchip"></i> <span data-key="technology">Technology</span></a></li>
+<li><a href="team.html" aria-current="page"><i class="fas fa-users"></i> <span data-key="team">Team</span></a></li>
+<li><a href="investors.html"><i class="fas fa-chart-line"></i> <span data-key="investors">Investors</span></a></li>
+<li><a href="blog.html"><i class="fas fa-blog"></i> <span data-key="blog">Blog</span></a></li>
+<li><a href="contact.html"><i class="fas fa-phone"></i> <span data-key="contact">Contact</span></a></li>
 </ul>
 </nav>
 
-<!-- HERO -->
 <section class="team-hero">
-<h1>Meet the Team Behind AgriRover</h1>
-
-<p>
-A passionate team working to build affordable agricultural robotics
-for small and marginal farmers in India.
-</p>
-</section>
-
-<!-- FOUNDING TEAM -->
-<section class="team-section">
-
-<h2>Founding Team</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="profile-img">
-<img src="image/satyam.jpeg">
-</div>
-
-<h3>Satyam Tiwari</h3>
-
-<p class="role">Founder – AI & Hardware</p>
-
-<p class="desc">
-Leading the development of AgriRover including hardware design,
-robotics engineering and future AI automation systems.
-</p>
-
-<a href="https://www.linkedin.com/in/satyam-kumar-8665ba2a7" target="_blank" class="social">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="profile-img">
-  <img src="image/Harishama.jpeg.jpg" alt="Harishama">
-</div>
-
-<h3>Harishama Chaurasia</h3>
-
-<p class="role">Co-Founder – Research & Documentation</p>
-
-<p class="desc">
-Responsible for research, documentation,
-startup grant proposals and coordination.
-</p>
-
-<a href="https://www.linkedin.com/in/harishama" target="_blank" class="social">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ENGINEERING TEAM -->
-<section class="team-section light">
-
-<h2>Engineering Team</h2>
-
-<div class="cards">
-
-<div class="card">
-<i class="fas fa-cogs icon"></i>
-<h3>Hardware Engineers</h3>
-
-<p class="desc">
-Designing the mechanical structure,
-electronics integration and prototype testing.
-</p>
-</div>
-
-<div class="card">
-<i class="fas fa-microchip icon"></i>
-<h3>Embedded Developers</h3>
-
-<p class="desc">
-Developing microcontroller systems,
-wireless communication and control systems.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ADVISORS -->
-<section class="team-section">
-
-  <h2>Advisors</h2>
-
-  <div class="team-grid small">
-
-    <div class="team-card">
-      <i class="fas fa-leaf"></i>
-      <h3>Agriculture Expert</h3>
-    </div>
-
-    <div class="team-card">
-      <i class="fas fa-lightbulb"></i>
-      <h3>Tech Mentor</h3>
-    </div>
-
+  <div class="team-hero-inner">
+    <p class="team-hero-label" data-key="teamHeroLabel">People &amp; mission</p>
+    <h1 data-key="teamHeroTitle">Meet the team behind AgriRover</h1>
+    <p class="team-hero-lead" data-key="teamHeroLead">We are building affordable, field-ready robotics so small and marginal farmers can farm with less drudgery, lower input waste, and more predictable outcomes.</p>
+    <ul class="team-hero-stats" aria-label="Team principles">
+      <li>
+        <span class="team-hero-stat-value"><i class="fas fa-seedling" aria-hidden="true"></i></span>
+        <span class="team-hero-stat-label" data-key="teamStat1">Farmer-first product decisions</span>
+      </li>
+      <li>
+        <span class="team-hero-stat-value"><i class="fas fa-map-location-dot" aria-hidden="true"></i></span>
+        <span class="team-hero-stat-label" data-key="teamStat2">Built for Indian fields &amp; crops</span>
+      </li>
+      <li>
+        <span class="team-hero-stat-value"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
+        <span class="team-hero-stat-label" data-key="teamStat3">Hardware, embedded &amp; AI in one loop</span>
+      </li>
+    </ul>
   </div>
-
 </section>
 
-
-
-
-<!-- ADVISORS -->
-<section class="team-section">
-
-  <h2>Advisors</h2>
-
-  <div class="team-grid small">
-
-    <div class="team-card">
-      <i class="fas fa-leaf"></i>
-      <h3>Agriculture Expert</h3>
-    </div>
-
-    <div class="team-card">
-      <i class="fas fa-lightbulb"></i>
-      <h3>Tech Mentor</h3>
-    </div>
-
+<section class="team-section team-values" aria-labelledby="values-heading">
+  <h2 id="values-heading" data-key="valuesHeading">How we work</h2>
+  <p class="section-intro" data-key="valuesIntro">Principles that keep AgriRover honest, useful, and shippable.</p>
+  <div class="team-values-grid">
+    <article class="value-card">
+      <div class="value-card-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+      <h3 data-key="valueH1">Listen before we build</h3>
+      <p data-key="valueP1">We treat farmer feedback and field trials as the source of truth — not slide decks.</p>
+    </article>
+    <article class="value-card">
+      <div class="value-card-icon" aria-hidden="true"><i class="fas fa-gauge-high"></i></div>
+      <h3 data-key="valueH2">Reliability over hype</h3>
+      <p data-key="valueP2">Simple mechanisms, testable electronics, and maintainable code beat brittle demos.</p>
+    </article>
+    <article class="value-card">
+      <div class="value-card-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+      <h3 data-key="valueH3">Grow the circle</h3>
+      <p data-key="valueP3">We actively welcome engineers, agronomists, and partners who care about the same mission.</p>
+    </article>
   </div>
-
 </section>
 
-<!-- INCUBATION -->
-<section class="team-section highlight">
-
-  <h2>Startup Support</h2>
-
-  <div class="team-grid small">
-
-    <div class="team-card">
-      <i class="fas fa-university"></i>
-      <h3>Innovation Program</h3>
-    </div>
-
-    <div class="team-card">
-      <i class="fas fa-user-tie"></i>
-      <h3>Mentors</h3>
-    </div>
-
+<section class="team-section" aria-labelledby="founders-heading">
+  <h2 id="founders-heading" data-key="foundersHeading">Founding team</h2>
+  <p class="section-intro" data-key="foundersIntro">The core team setting direction for product, research, and execution.</p>
+  <div class="founder-grid">
+    <article class="founder-card">
+      <div class="profile-img">
+        <img src="image/satyam.jpeg" alt="Portrait of Satyam Tiwari" loading="lazy" width="180" height="180">
+      </div>
+      <h3>Satyam Tiwari</h3>
+      <p class="role" data-key="satyamRole">Founder — AI &amp; hardware</p>
+      <p class="desc" data-key="satyamBio">Leads AgriRover's technical direction: mechanical and electronic design, robotics integration, and the roadmap toward intelligent automation in the field.</p>
+      <ul class="founder-tags" aria-label="Focus areas">
+        <li data-key="tagRobotics">Robotics</li>
+        <li data-key="tagPrototyping">Prototyping</li>
+        <li data-key="tagSystems">Systems design</li>
+      </ul>
+      <a href="https://www.linkedin.com/in/satyam-kumar-8665ba2a7" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i> <span data-key="linkedin">LinkedIn</span>
+      </a>
+    </article>
+    <article class="founder-card">
+      <div class="profile-img">
+        <img src="image/Harishama.jpeg.jpg" alt="Portrait of Harishama Chaurasia" loading="lazy" width="180" height="180">
+      </div>
+      <h3>Harishama Chaurasia</h3>
+      <p class="role" data-key="harishRole">Co-founder — research &amp; documentation</p>
+      <p class="desc" data-key="harishBio">Drives research synthesis, documentation, grant and program applications, and coordination so the team can move fast without losing rigor or clarity.</p>
+      <ul class="founder-tags" aria-label="Focus areas">
+        <li data-key="tagResearch">Research</li>
+        <li data-key="tagGrants">Grants &amp; programs</li>
+        <li data-key="tagOperations">Operations</li>
+      </ul>
+      <a href="https://www.linkedin.com/in/harishama" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i> <span data-key="linkedin">LinkedIn</span>
+      </a>
+    </article>
   </div>
-
 </section>
 
-<!-- CTA -->
-<section class="cta">
-<h2>Want to Join AgriRover?</h2>
-<p>We are looking for passionate engineers & innovators 🚀</p>
-
-<a href="contact.html">
-<button class="btn">Join Us</button>
-</a>
+<section class="team-section light" aria-labelledby="engineering-heading">
+  <h2 id="engineering-heading" data-key="engSectionTitle">What the engineering team covers</h2>
+  <p class="section-intro" data-key="engSectionIntro">Capability areas we are building (and hiring into) as AgriRover matures.</p>
+  <div class="cards team-role-cards">
+    <article class="card">
+      <i class="fas fa-gears icon" aria-hidden="true"></i>
+      <h3 data-key="engMechTitle">Mechanical &amp; hardware</h3>
+      <p class="desc" data-key="engMechDesc">Chassis, actuators, power and sensors — designed for mud, dust, and long days in the sun.</p>
+    </article>
+    <article class="card">
+      <i class="fas fa-microchip icon" aria-hidden="true"></i>
+      <h3 data-key="engEmbTitle">Embedded &amp; firmware</h3>
+      <p class="desc" data-key="engEmbDesc">Microcontrollers, motor control, wireless links, and safe, deterministic behavior on the robot.</p>
+    </article>
+    <article class="card">
+      <i class="fas fa-brain icon" aria-hidden="true"></i>
+      <h3 data-key="engSoftTitle">Software &amp; AI</h3>
+      <p class="desc" data-key="engSoftDesc">Field software, data from trials, and models that make spraying and navigation smarter over time.</p>
+    </article>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<section class="team-section" aria-labelledby="advisors-heading">
+  <h2 id="advisors-heading" data-key="advisorsHeading">Advisors</h2>
+  <p class="section-intro" data-key="advisorsIntro">Domain experts who help us stress-test assumptions and stay grounded in real agriculture.</p>
+  <div class="team-grid small team-grid--descriptive">
+    <article class="team-card">
+      <i class="fas fa-leaf" aria-hidden="true"></i>
+      <h3 data-key="advAgTitle">Agriculture advisor</h3>
+      <p class="team-card-desc" data-key="advAgDesc">Crop cycles, local practices, and what &quot;good enough&quot; looks like on small plots.</p>
+    </article>
+    <article class="team-card">
+      <i class="fas fa-lightbulb" aria-hidden="true"></i>
+      <h3 data-key="advTechTitle">Technology mentor</h3>
+      <p class="team-card-desc" data-key="advTechDesc">Architecture, manufacturability, and scaling a hardware-heavy startup responsibly.</p>
+    </article>
+  </div>
+</section>
+
+<section class="team-section highlight" aria-labelledby="support-heading">
+  <h2 id="support-heading" data-key="supportHeading">Startup support</h2>
+  <p class="section-intro" data-key="supportIntro">Programs and mentors that back our execution and connect us to the ecosystem.</p>
+  <div class="team-grid small team-grid--descriptive">
+    <article class="team-card">
+      <i class="fas fa-building-columns" aria-hidden="true"></i>
+      <h3 data-key="supInnovTitle">Innovation programs</h3>
+      <p class="team-card-desc" data-key="supInnovDesc">Incubation, cohorts, and structured support as we validate and deploy.</p>
+    </article>
+    <article class="team-card">
+      <i class="fas fa-user-tie" aria-hidden="true"></i>
+      <h3 data-key="supMentorsTitle">Mentors</h3>
+      <p class="team-card-desc" data-key="supMentorsDesc">Operators and founders who have shipped hardware and navigated early-stage growth.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta team-cta-band">
+  <h2 data-key="teamCtaTitle">Want to join AgriRover?</h2>
+  <p data-key="teamCtaSub">We are looking for engineers, makers, and researchers who want their work to show up in real fields.</p>
+  <a href="contact.html" class="btn" data-key="contactUsBtn">Contact us</a>
+</section>
+
 <footer class="footer">
-
   <div class="footer-container">
-
-    <!-- LEFT -->
     <div class="footer-left">
-
       <div class="footer-logo">
         <i class="fas fa-microchip"></i>
         <div>
           <h2>AI AgriRover</h2>
-          <span>SMART AGRICULTURE ROBOTICS</span>
+          <span data-key="smartAgri">SMART AGRICULTURE ROBOTICS</span>
         </div>
       </div>
-
-      <p class="footer-desc">
-        Empowering India's small farmers with intelligent robotic automation.
-        Building the future of precision agriculture, one field at a time.
-      </p>
-
+      <p class="footer-desc" data-key="footerDesc">Empowering India's small farmers with intelligent robotic automation. Building the future of precision agriculture, one field at a time.</p>
       <p><i class="fas fa-envelope"></i> info.aiagrirover@gmail.com</p>
-      <p><i class="fas fa-map-marker-alt"></i> India</p>
-
+      <p><i class="fas fa-map-marker-alt"></i> <span data-key="location">India</span></p>
     </div>
-
-    <!-- COMPANY -->
     <div class="footer-links">
-      <h3>COMPANY</h3>
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
-      <a href="technology.html">Technology</a>
-      <a href="team.html">Team</a>
+      <h3 data-key="company">COMPANY</h3>
+      <a href="index.html" data-key="home">Home</a>
+      <a href="product.html" data-key="product">Product</a>
+      <a href="technology.html" data-key="technology">Technology</a>
+      <a href="team.html" data-key="team">Team</a>
     </div>
-
-    <!-- RESOURCES -->
     <div class="footer-links">
-      <h3>RESOURCES</h3>
-      <a href="investors.html">Investors</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <h3 data-key="resources">RESOURCES</h3>
+      <a href="investors.html" data-key="investors">Investors</a>
+      <a href="blog.html" data-key="blog">Blog</a>
+      <a href="contact.html" data-key="contact">Contact</a>
     </div>
-
   </div>
-
-  <!-- BOTTOM -->
   <div class="footer-bottom">
-    <p>© 2026 AI AgriRover | Smart Agriculture Robotics</p>
-    <span class="status-dot">Systems Online</span>
+    <p data-key="copyright">© 2026 AI AgriRover | Smart Agriculture Robotics</p>
+    <span class="status-dot" data-key="statusOnline">Systems Online</span>
   </div>
+</footer>
 
-<script src="script.js"></script>
-
+<script src="js/lang.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
