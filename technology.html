@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriRover Technology</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+<div class="nav-left">
+<div class="logo">
+<i class="fas fa-tractor"></i> AI AgriRover
+</div>
+</div>
+
+<div class="nav-actions">
+<div class="lang-dropdown">
+<button type="button" class="lang-toggle" id="lang-toggle" aria-label="Select language" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu">English</button>
+<div class="lang-dropdown-content" id="lang-menu" role="menu" aria-labelledby="lang-toggle">
+<button type="button" role="menuitem" onclick="changeLanguage('en')">English</button>
+<button type="button" role="menuitem" onclick="changeLanguage('hi')">हिन्दी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('mr')">मराठी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('ta')">தமிழ்</button>
+<button type="button" role="menuitem" onclick="changeLanguage('te')">తెలుగు</button>
+<button type="button" role="menuitem" onclick="changeLanguage('pa')">ਪੰਜਾਬੀ</button>
+</div>
+</div>
+</div>
+
+<button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<ul id="navMenu">
+<li><a href="index.html"><i class="fas fa-home"></i> <span data-key="home">Home</span></a></li>
+<li><a href="product.html"><i class="fas fa-box"></i> <span data-key="product">Product</span></a></li>
+<li><a href="technology.html" aria-current="page"><i class="fas fa-microchip"></i> <span data-key="technology">Technology</span></a></li>
+<li><a href="team.html"><i class="fas fa-users"></i> <span data-key="team">Team</span></a></li>
+<li><a href="investors.html"><i class="fas fa-chart-line"></i> <span data-key="investors">Investors</span></a></li>
+<li><a href="blog.html"><i class="fas fa-blog"></i> <span data-key="blog">Blog</span></a></li>
+<li><a href="contact.html"><i class="fas fa-phone"></i> <span data-key="contact">Contact</span></a></li>
+</ul>
+</nav>
+
+<section class="tech-hero">
+  <h1 data-key="techPageHeroTitle">Engineering Behind AgriRover</h1>
+  <p data-key="techPageHeroSub">Advanced robotics, embedded systems and wireless tech powering smart farming.</p>
+</section>
+
+<section class="tech-section light">
+  <h2 data-key="sysArchitecture">System Architecture</h2>
+  <div class="tech-grid">
+    <div class="tech-card"><i class="fas fa-battery-full"></i><h3 data-key="powerUnit">Power Unit</h3></div>
+    <div class="tech-card"><i class="fas fa-microchip"></i><h3 data-key="controlUnit">Control Unit</h3></div>
+    <div class="tech-card"><i class="fas fa-cogs"></i><h3 data-key="driveSystem">Drive System</h3></div>
+    <div class="tech-card"><i class="fas fa-tools"></i><h3 data-key="attachmentsCard">Attachments</h3></div>
+  </div>
+</section>
+
+<section class="tech-section split">
+  <div class="split-container">
+    <div class="split-text">
+      <h2 data-key="mechDesignTitle">Mechanical Design</h2>
+      <p data-key="mechDesignP">Built with rugged steel structure, compact body and terrain-ready wheels.</p>
+      <ul>
+        <li data-key="mechLi1">✔ Steel Frame</li>
+        <li data-key="mechLi2">✔ Enclosed Body</li>
+        <li data-key="mechLi3">✔ 10-inch Wheels</li>
+        <li data-key="mechLi4">✔ Compact Design</li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <img src="image/agrirover.png" alt="AgriRover">
+    </div>
+  </div>
+</section>
+
+<section class="tech-section light">
+  <h2 data-key="elecControlTitle">Electronics & Control</h2>
+  <div class="tech-grid">
+    <div class="tech-card"><i class="fas fa-microchip"></i><h3 data-key="microTitle">Microcontroller</h3></div>
+    <div class="tech-card"><i class="fas fa-sliders-h"></i><h3 data-key="motorDriver">Motor Driver</h3></div>
+    <div class="tech-card"><i class="fas fa-bolt"></i><h3 data-key="powerSysTitle">Power System</h3></div>
+    <div class="tech-card"><i class="fas fa-shield-alt"></i><h3 data-key="safetyTitle">Safety</h3></div>
+  </div>
+</section>
+
+<section class="tech-section split reverse">
+  <div class="split-container">
+    <div class="split-image">
+      <img src="image/rover.png" alt="AgriRover">
+    </div>
+    <div class="split-text">
+      <h2 data-key="wirelessCommTitle">Wireless Communication</h2>
+      <ul>
+        <li data-key="wlLi1">✔ NRF / LoRa Modules</li>
+        <li data-key="wlLi2">✔ 1KM Range</li>
+        <li data-key="wlLi3">✔ Custom Remote</li>
+        <li data-key="wlLi4">✔ Low Power</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="tech-section dark">
+  <h2 data-key="futureTechSectionTitle">Future Technology</h2>
+  <div class="tech-grid">
+    <div class="tech-card"><i class="fas fa-robot"></i><h3 data-key="futureAiNav">AI Navigation</h3></div>
+    <div class="tech-card"><i class="fas fa-cloud"></i><h3 data-key="futureIot">IoT</h3></div>
+    <div class="tech-card"><i class="fas fa-mobile-alt"></i><h3 data-key="futureMobile">Mobile App</h3></div>
+    <div class="tech-card"><i class="fas fa-solar-panel"></i><h3 data-key="futureSolar">Solar</h3></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <i class="fas fa-microchip"></i>
+        <div>
+          <h2>AI AgriRover</h2>
+          <span data-key="smartAgri">SMART AGRICULTURE ROBOTICS</span>
+        </div>
+      </div>
+      <p class="footer-desc" data-key="footerDesc">Empowering India's small farmers with intelligent robotic automation. Building the future of precision agriculture, one field at a time.</p>
+      <p><i class="fas fa-envelope"></i> info.aiagrirover@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> <span data-key="location">India</span></p>
+    </div>
+    <div class="footer-links">
+      <h3 data-key="company">COMPANY</h3>
+      <a href="index.html" data-key="home">Home</a>
+      <a href="product.html" data-key="product">Product</a>
+      <a href="technology.html" data-key="technology">Technology</a>
+      <a href="team.html" data-key="team">Team</a>
+    </div>
+    <div class="footer-links">
+      <h3 data-key="resources">RESOURCES</h3>
+      <a href="investors.html" data-key="investors">Investors</a>
+      <a href="blog.html" data-key="blog">Blog</a>
+      <a href="contact.html" data-key="contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-key="copyright">© 2026 AI AgriRover | Smart Agriculture Robotics</p>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

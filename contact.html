@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact AgriRover</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+<div class="nav-left">
+<div class="logo">
+<i class="fas fa-tractor"></i> AI AgriRover
+</div>
+</div>
+
+<div class="nav-actions">
+<div class="lang-dropdown">
+<button type="button" class="lang-toggle" id="lang-toggle" aria-label="Select language" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu">English</button>
+<div class="lang-dropdown-content" id="lang-menu" role="menu" aria-labelledby="lang-toggle">
+<button type="button" role="menuitem" onclick="changeLanguage('en')">English</button>
+<button type="button" role="menuitem" onclick="changeLanguage('hi')">हिन्दी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('mr')">मराठी</button>
+<button type="button" role="menuitem" onclick="changeLanguage('ta')">தமிழ்</button>
+<button type="button" role="menuitem" onclick="changeLanguage('te')">తెలుగు</button>
+<button type="button" role="menuitem" onclick="changeLanguage('pa')">ਪੰਜਾਬੀ</button>
+</div>
+</div>
+</div>
+
+<button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<ul id="navMenu">
+<li><a href="index.html"><i class="fas fa-home"></i> <span data-key="home">Home</span></a></li>
+<li><a href="product.html"><i class="fas fa-box"></i> <span data-key="product">Product</span></a></li>
+<li><a href="technology.html"><i class="fas fa-microchip"></i> <span data-key="technology">Technology</span></a></li>
+<li><a href="team.html"><i class="fas fa-users"></i> <span data-key="team">Team</span></a></li>
+<li><a href="investors.html"><i class="fas fa-chart-line"></i> <span data-key="investors">Investors</span></a></li>
+<li><a href="blog.html"><i class="fas fa-blog"></i> <span data-key="blog">Blog</span></a></li>
+<li><a href="contact.html" aria-current="page"><i class="fas fa-phone"></i> <span data-key="contact">Contact</span></a></li>
+</ul>
+</nav>
+
+<section class="contact-hero">
+  <h1 data-key="contactPageTitle">Contact AgriRover</h1>
+  <p data-key="contactPageSub">We’d love to hear from you — farmer, investor or partner.</p>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-form-box">
+      <h2 data-key="sendUsMessage">Send Us a Message</h2>
+      <form onsubmit="sendMail(event)">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="name" data-placeholder="placeholderName" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" data-placeholder="placeholderEmail" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-pen"></i>
+          <input type="text" id="subject" data-placeholder="placeholderSubject" placeholder="Subject">
+        </div>
+        <div class="input-group">
+          <i class="fas fa-comment"></i>
+          <textarea id="message" data-placeholder="placeholderMessage" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn" data-key="sendMessageBtn">Send Message →</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <h2 data-key="contactInformation">Contact Information</h2>
+      <div class="info-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3 data-key="labelEmail">Email</h3>
+          <p>info.aiagrirover@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3 data-key="labelPhone">Phone</h3>
+          <p>+91 9508554025</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3 data-key="labelLocation">Location</h3>
+          <p data-key="location">India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <i class="fas fa-microchip"></i>
+        <div>
+          <h2>AI AgriRover</h2>
+          <span data-key="smartAgri">SMART AGRICULTURE ROBOTICS</span>
+        </div>
+      </div>
+      <p class="footer-desc" data-key="footerDesc">Empowering India's small farmers with intelligent robotic automation. Building the future of precision agriculture, one field at a time.</p>
+      <p><i class="fas fa-envelope"></i> info.aiagrirover@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> <span data-key="location">India</span></p>
+    </div>
+    <div class="footer-links">
+      <h3 data-key="company">COMPANY</h3>
+      <a href="index.html" data-key="home">Home</a>
+      <a href="product.html" data-key="product">Product</a>
+      <a href="technology.html" data-key="technology">Technology</a>
+      <a href="team.html" data-key="team">Team</a>
+    </div>
+    <div class="footer-links">
+      <h3 data-key="resources">RESOURCES</h3>
+      <a href="investors.html" data-key="investors">Investors</a>
+      <a href="blog.html" data-key="blog">Blog</a>
+      <a href="contact.html" data-key="contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-key="copyright">© 2026 AI AgriRover | Smart Agriculture Robotics</p>
+    <span class="status-dot" data-key="statusOnline">Systems Online</span>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
