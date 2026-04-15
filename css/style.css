@@ -176,10 +176,13 @@ nav a:hover {
   justify-content: flex-start;
   padding: 80px;
   text-align: left;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-              url('../image/farm.jpg') no-repeat center center/cover;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                      url('../image/fram.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   color: #e2e8f0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,128,0,0.3));
 }
 
 .hero-content {
